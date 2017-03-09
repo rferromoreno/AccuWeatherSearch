@@ -1,0 +1,7 @@
+{
+	"apiurl": "http://dataservice.accuweather.com/forecasts/v1/daily/1day/7894",
+	"apikey": "yLU7EYM8EHQpiyAFQ5ZILIFYDaPFuhey",
+	"port": 8080,
+	"bodyLimit": "100kb",
+	"corsHeaders": ["Link"]
+}
