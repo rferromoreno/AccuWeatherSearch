@@ -9,8 +9,6 @@ async function start() {
   let app = express();
   app.server = http.createServer(app);
 
-  
-
   // 3rd party middleware
   app.use(
     cors({
@@ -23,11 +21,7 @@ async function start() {
       limit: config.bodyLimit
     })
   );
-
-
-
   
-
   // api router
   app.use("/api", routes({ config }));
 

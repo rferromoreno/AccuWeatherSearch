@@ -7,7 +7,7 @@ export default
     // Revisar si la logica de la validación conviene ponerla acá o en otro lado.
     getClimaService()
     .then((data) => {
-        response.climaArray = data;
+        //response.climaArray = data;
         return response.json(data);
     })
     .catch((error) => {
