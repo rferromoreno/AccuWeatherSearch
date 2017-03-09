@@ -2,7 +2,7 @@
 ## Getting Started
 Clone the repository and remove the .git folder:  
 ```
-$ git clone https://github.com/agustingp/accuWeather.git my-app
+$ git clone https://github.com/rferromoreno/AccuWeatherSearch.git my-app
 $ cd my-app
 $ rm -rf .git
 $ npm install
