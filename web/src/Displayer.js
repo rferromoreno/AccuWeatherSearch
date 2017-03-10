@@ -9,16 +9,16 @@ export default
 
         
         let columns = [];
-        let aux = 0;
-
+        
         //No renderizo nada sino buscaron
         if (!this.props.alreadySearched) 
             return null;
-
+            
+        let aux=0;
         //Creo una fila (Item) por noticia
         this.props.days.forEach((day) => {
             columns.push(
-                <Item day={day}/>
+                <Item day={day} key={aux}/>
             );
             aux++; 
         });   

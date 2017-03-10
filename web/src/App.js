@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import Botonera from "./Botonera";
 import Displayer from "./Displayer";
 import "./App.css";
