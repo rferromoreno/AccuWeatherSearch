@@ -14,6 +14,20 @@
   color: white;
 }
 
+.diaValido{
+background-color: lightgreen;
+ font-size: large;
+ width: 100px;
+
+}
+
+.diaInvalido{
+background-color: red;
+ font-size: large;
+ width: 100px;
+
+}
+
 .App-intro {
   font-size: large;
 }
