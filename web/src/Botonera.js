@@ -4,13 +4,14 @@ import React, { Component } from 'react';
 
 export default
   class Botonera extends Component {
+      constructor(props){
+          super(props);
+          this.handleSubmit = this.handleSubmit.bind(this);
+      }
    
  handleSubmit(event) {
-      event.preventDefault();
-       // this.props.onSubmit(event);  
-        alert(event); 
+        this.props.onSubmit(event);   
     }
-   
 
     render() {
         return (
@@ -22,19 +23,29 @@ export default
                             <form onSubmit={ this.handleSubmit }>
                             
                                 <div>
-                                    <select name="sport">
+                                 <span> Deporte:  </span>
+                                    <select name="sport" required>
                     
                                     <option value="futbol">Futbol</option>
                                     <option value="basket">Basket</option>
                                     <option value="natacion">Natacion</option>
                                     <option value="running">Running</option>
                                     </select>
-
+                                </div>
                                     <div className="busqueda">
                                             <span> Dias:  </span>
-                                            <input type="number" name="nroDias" required/>
+
+                                            <select name="nroDias" required>
+                    
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                            </select>
+                                            
                                 </div>
-                              </div>
+                              
 
                             <div className="boton">
                                             <input type="submit" value="Search" />

@@ -5,6 +5,7 @@ import Displayer from "./Displayer";
 import "./App.css";
 
 
+
 var days= [
 { date: '2017-03-10T07:00:00-03:00',
 feasible: true,
@@ -31,7 +32,18 @@ reason: 'Alta temperatura'
   ]
 
 class App extends Component {
+  constructor(props) {
+        super(props);
+        
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
 
+
+async  handleSubmit(event) {
+        event.preventDefault();
+      alert(event.target.sport.value +event.target.nroDias.value );
+    
+    }
   
   
  
@@ -46,7 +58,7 @@ class App extends Component {
                 </div>
      
         <div >
-          <Botonera   />
+          <Botonera onSubmit={ this.handleSubmit }   />
 
           <Displayer days={days}  alreadySearched=' true' />
         </div>

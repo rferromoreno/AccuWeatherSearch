@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
-
+import dateFormat from 'dateformat';
 
 
 export default 
   class Item extends Component {
     render() {
+
+     
          let td=null;
          let day=this.props.day;
+         let fecha = dateFormat(day.date, 'dddd, d');
         if (day.feasible){
             td=(   
                 <div>
                     <div className="diaValido">
-                    {day.date}
+                    {fecha}
                     </div>
                 </div> );}
          else {
                td=( <div> 
                         <div className="diaInvalido">
-                            {day.date}
+                            {fecha}
                        </div> 
                         <div>
                              {day.reason}
