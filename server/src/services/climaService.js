@@ -8,6 +8,20 @@ import logger from "../logger";
 *   Returns a promise of an array of news.
 */
 
+//Options template for request
+const optionTmp = {
+    method: 'GET',
+    uri: config.apiurl,
+    qs: {
+
+        'apikey': config.apikey,
+        'metric': 'true',
+        'lenguaje': 'es-AR'
+        
+    },
+    json: true
+};
+
 export default
   function getClima() {
     let options = setOptions();
@@ -24,25 +38,11 @@ function setOptions(daysNumber, regionCode) {
 
 //Resolving promise to strip innecesary meta-data
 function stripData(response) {
-    logger.log('info',`${module.id} - method stripData - response status: ${response.status}`);
+    logger.info(`${module.id} - method stripData - response status: ${response.status}`);
     return response;
 }
 
 function handleError(error) {
-    logger.log('error',`${module.id} - error: ${error}`);
+    logger.error(`${module.id} - error: ${error}`);
     return error; 
 }
-
-//Options template for request
-const optionTmp = {
-    method: 'GET',
-    uri: config.apiurl,
-    qs: {
-
-        'apikey': config.apikey,
-        'metric': 'true',
-        'lenguaje': 'es-AR'
-        
-    },
-    json: true
-};

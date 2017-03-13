@@ -9,7 +9,7 @@ export default
       response.json(sports);
     })
     .catch((error) => { 
-      logger.log('error', 'Log de error');
+      logger.error('Log de error');
       next(error);  
     });
 }

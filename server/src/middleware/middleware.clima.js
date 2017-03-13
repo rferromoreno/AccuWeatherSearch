@@ -23,7 +23,7 @@ export default
     .then((data) => {   
         // Logica del programa. Ver si no conviene pasarla a otro lado
         var sportSelected = db.sports[sport]; 
-        
+
         console.log(db.sports);
         if (sportSelected == undefined) {
             // devolver error
@@ -36,7 +36,7 @@ export default
         return data;
     })
     .catch((error) => {
-        logger.log('error',`${module.id} - ${error}`);
+        logger.error(`${module.id} - ${error}`);
         next(error);
     });
 }
