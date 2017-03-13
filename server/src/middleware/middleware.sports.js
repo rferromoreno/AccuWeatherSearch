@@ -4,13 +4,12 @@ import logger from "../logger";
 
 export default
   function getSports(request, response, next) {
-
     getSportsService()
-    .then((sports) => { return response.json(sports)})
-    .catch((error) => 
-    { 
+    .then((sports) => { 
+      response.json(sports);
+    })
+    .catch((error) => { 
       logger.log('error', 'Log de error');
       next(error);  
     });
-
 }

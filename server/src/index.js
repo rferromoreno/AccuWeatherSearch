@@ -2,7 +2,7 @@ import http from "http";
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
-import routes from "./routes";
+import routes from "./routes/index.js";
 import config from "./config.json";
 
 async function start() {
