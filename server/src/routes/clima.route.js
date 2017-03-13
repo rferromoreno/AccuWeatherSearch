@@ -7,7 +7,7 @@ import climaMiddleware from '../middleware/middleware.clima';
 
 // :deporte/:cantDias
 
-  api.get("/", 
+  api.get("/:deporte/:dias", 
             climaMiddleware);
   return api;
 };

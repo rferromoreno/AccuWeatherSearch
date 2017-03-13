@@ -19,16 +19,12 @@ export default
 //Creates the options object.
 function setOptions(daysNumber, regionCode) {
     let options = optionTmp;
-
-   
     return options;
 }
 
 //Resolving promise to strip innecesary meta-data
 function stripData(response) {
-    //console.log(`${module.id} - method stripData - response status: ${response.status}`);
     logger.log('info',`${module.id} - method stripData - response status: ${response.status}`);
-    //console.log(response);
     return response;
 }
 
